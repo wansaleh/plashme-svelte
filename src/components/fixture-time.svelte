@@ -1,21 +1,11 @@
 <script>
-  import {
-    differenceInHours,
-    format,
-    formatDistanceToNow,
-    formatDistanceToNowStrict,
-    parseISO,
-  } from 'date-fns';
+  import { format, formatDistanceToNow, parseISO } from 'date-fns';
   export let date;
 
-  let diffHours = differenceInHours(parseISO(date), new Date());
   let dist = formatDistanceToNow(parseISO(date));
-  let distStrict = formatDistanceToNowStrict(parseISO(date));
 
   setInterval(() => {
-    diffHours = differenceInHours(parseISO(date), new Date());
     dist = formatDistanceToNow(parseISO(date));
-    distStrict = formatDistanceToNowStrict(parseISO(date));
   }, 1000);
 </script>
 
@@ -25,11 +15,6 @@
     style="text-shadow: none;"
   >
     {format(parseISO(date), 'iiii, MMMM d, yyy')},
-    {format(parseISO(date), 'p')}, in
-    {#if diffHours > 48}
-      {distStrict}
-    {:else}
-      {dist}
-    {/if}
+    {format(parseISO(date), 'p')}, in {dist}
   </div>
 </div>
