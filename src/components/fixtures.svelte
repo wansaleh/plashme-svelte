@@ -1,15 +1,10 @@
 <script>
   import { onMount } from 'svelte';
+  import { useSWR } from 'sswr';
   import FixtureTime from './fixture-time.svelte';
 
-  let fixtures = [];
-
-  onMount(async () => {
-    const res = await fetch('/chelsea').then((r) => r.json());
-    fixtures = res.fixtures;
-  });
-
-  $: sliced = fixtures?.slice(0, 3);
+  const { data } = useSWR('/chelsea');
+  $: sliced = $data?.fixtures?.slice(0, 3) ?? [];
 </script>
 
 <div class="mt-4">

@@ -34,6 +34,7 @@
 	"type": "module",
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.10",
-		"date-fns": "^2.25.0"
+		"date-fns": "^2.25.0",
+		"sswr": "^1.3.1"
 	}
 }
