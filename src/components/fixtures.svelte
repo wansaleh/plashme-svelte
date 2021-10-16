@@ -4,11 +4,10 @@
   import FixtureTime from './fixture-time.svelte';
 
   const { data } = useSWR('/chelsea');
-  $: sliced = $data?.fixtures?.slice(0, 3) ?? [];
 </script>
 
 <div class="mt-4">
-  {#each sliced as fixture}
+  {#each $data?.fixtures?.slice(0, 3) ?? [] as fixture}
     <div class="mt-4 mr-0">
       <div class="flex relative justify-end items-center text-3xl">
         <span class="py-0.5 px-1 mr-2 text-sm leading-none rounded-lg border-2">

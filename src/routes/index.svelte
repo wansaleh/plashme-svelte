@@ -1,6 +1,7 @@
 <script>
   import TimeDate from '../components/time-date.svelte';
   import Fixtures from '../components/fixtures.svelte';
+  import AnalogClock from '../components/analog-clock.svelte';
 </script>
 
 <div
@@ -10,6 +11,7 @@
     : ''}"
 >
   <div class="main-date">
+    <!-- <div class="w-60"><AnalogClock /></div> -->
     <TimeDate />
     <Fixtures />
   </div>
@@ -17,7 +19,7 @@
 
 <style>
   .bg {
-    background: url(https://source.unsplash.com/collection/9744402/2500x1400)
+    background: url(https://source.unsplash.com/collection/1802604/2500x1400)
       no-repeat center/cover;
   }
 
