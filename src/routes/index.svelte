@@ -1,8 +1,8 @@
 <script>
   import TimeDate from '../components/time-date.svelte';
   import Fixtures from '../components/fixtures.svelte';
-  import AnalogClock from '../components/analog-clock.svelte';
   import Table from '../components/table.svelte';
+  // import AnalogClock from '../components/analog-clock.svelte';
 </script>
 
 <div
@@ -14,10 +14,10 @@
   <div class="main-date">
     <!-- <div class="w-60"><AnalogClock /></div> -->
     <TimeDate />
-    <div class="flex justify-end">
-      <Table />
-      <div class="w-4" />
+    <div class="flex items-end justify-end mt-8">
       <Fixtures />
+      <div class="w-4" />
+      <Table />
     </div>
   </div>
 </div>

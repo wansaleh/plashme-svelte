@@ -6,7 +6,7 @@
   const { data } = useSWR('/table');
 </script>
 
-<div class="mt-8 flex justify-end leading-snug">
+<div class="leading-snug bg-black bg-opacity-60 rounded-xl p-2 text-sm">
   <table class="table-auto">
     <thead class="border-b border-opacity-40">
       <tr>
