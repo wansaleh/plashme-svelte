@@ -14,8 +14,9 @@
   <div class="main-date">
     <!-- <div class="w-60"><AnalogClock /></div> -->
     <TimeDate />
-    <div class="flex gap-6 justify-end">
+    <div class="flex justify-end">
       <Table />
+      <div class="w-4" />
       <Fixtures />
     </div>
   </div>
