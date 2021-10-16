@@ -3,7 +3,7 @@
   import { useSWR } from 'sswr';
   import FixtureTime from './fixture-time.svelte';
 
-  const { data } = useSWR('/chelsea');
+  const { data } = useSWR('/fixtures');
 </script>
 
 <div class="mt-4">
@@ -13,8 +13,9 @@
         <span class="py-0.5 px-1 mr-2 text-sm leading-none rounded-lg border-2">
           {fixture.competition}
         </span>
-        <span class="font-extralight tracking-tight">
-          {fixture.homeTeam} vs {fixture.awayTeam}
+        <span class="font-light tracking-normal">
+          {fixture.homeTeam} <span class="font-thin">vs</span>
+          {fixture.awayTeam}
         </span>
       </div>
       <FixtureTime date={fixture.time} />

@@ -2,6 +2,7 @@
   import TimeDate from '../components/time-date.svelte';
   import Fixtures from '../components/fixtures.svelte';
   import AnalogClock from '../components/analog-clock.svelte';
+  import Table from '../components/table.svelte';
 </script>
 
 <div
@@ -14,6 +15,7 @@
     <!-- <div class="w-60"><AnalogClock /></div> -->
     <TimeDate />
     <Fixtures />
+    <Table />
   </div>
 </div>
 

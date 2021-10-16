@@ -4,11 +4,11 @@
   let date = new Date();
   setInterval(() => {
     date = new Date();
-  }, 1000);
+  }, 100);
 </script>
 
 <div
-  class="text-[16vw] font-bold tracking-tighter flex items-center text-center"
+  class="text-[16vw] font-medium tracking-tighter flex items-center text-center"
 >
   <span class="w-[1.2em] text-right">{format(date, 'hh')}</span>
   <span class="">{format(date, ':mm:')}</span>
