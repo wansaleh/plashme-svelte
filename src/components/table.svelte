@@ -1,7 +1,7 @@
 <script>
   import { useSWR } from 'sswr';
 
-  const { data } = useSWR('/table-sky');
+  const { data } = useSWR('/api/table-sky');
 </script>
 
 <div class="leading-snug bg-black bg-opacity-60 rounded-xl p-2 text-sm">

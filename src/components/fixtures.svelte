@@ -1,12 +1,21 @@
 <script>
+  import { isAfter, parseISO } from 'date-fns';
+
   import { useSWR } from 'sswr';
   import FixtureTime from './fixture-time.svelte';
 
-  const { data: theguardian } = useSWR('/theguardian');
+  const { data: theguardian } = useSWR('/api/chelseafc');
+  let fixtures;
+  $: {
+    fixtures =
+      $theguardian?.fixtures
+        ?.filter((fix) => isAfter(parseISO(fix.time), new Date()))
+        .slice(0, 3) ?? [];
+  }
 </script>
 
 <div class="-my-4">
-  {#each $theguardian?.fixtures?.slice(0, 3) ?? [] as fixture}
+  {#each fixtures as fixture}
     <div class="my-4">
       <div class="flex relative justify-end items-center text-3xl">
         <span class="py-0.5 px-1 mr-2 text-sm leading-none rounded-lg border-2">
