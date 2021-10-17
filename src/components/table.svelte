@@ -55,8 +55,10 @@
   td {
     @apply px-2 py-1;
   }
-  th:is(:nth-child(1), :nth-child(n + 3)),
-  td:is(:nth-child(1), :nth-child(n + 3)) {
+  th:nth-child(1),
+  th:nth-child(n + 3),
+  td:nth-child(1),
+  td:nth-child(n + 3) {
     @apply text-right;
   }
   .win {
