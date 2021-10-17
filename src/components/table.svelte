@@ -6,7 +6,7 @@
 
 <div class="leading-snug bg-black bg-opacity-60 rounded-xl p-2 text-sm">
   <table class="table-auto text-left">
-    <thead class="border-b border-opacity-40">
+    <thead>
       <tr>
         <th>Pos</th>
         <th>Team</th>
@@ -14,8 +14,6 @@
         <th>W</th>
         <th>D</th>
         <th>L</th>
-        <th>GF</th>
-        <th>GA</th>
         <th>GD</th>
         <th>Pts</th>
         <th>Latest &gt;</th>
@@ -30,13 +28,11 @@
           <td>{team.wins}</td>
           <td>{team.draws}</td>
           <td>{team.losses}</td>
-          <td>{team.gf}</td>
-          <td>{team.ga}</td>
           <td>{team.gd}</td>
           <td class="font-bold">{team.points}</td>
           <td>
             <div class="flex -mx-1 items-center">
-              {#each team.form as form}
+              {#each team.form.slice(1, 6) as form}
                 <div
                   class="mx-0.5 h-3 w-3 rounded-full {form.outcome}"
                   title={form.result}
@@ -51,9 +47,15 @@
 </div>
 
 <style lang="postcss">
+  thead tr {
+    @apply border-b border-opacity-20;
+  }
+  tr:not(:last-child) {
+    @apply border-b border-opacity-20;
+  }
   th,
   td {
-    @apply px-2 py-1;
+    @apply px-2 py-1.5;
   }
   th:nth-child(1),
   th:nth-child(n + 3),
