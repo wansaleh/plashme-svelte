@@ -19,7 +19,7 @@ export async function get(): Promise<{ body: { table: Team[] } }> {
   const table = wikitext
     .split('\n')
     .filter((line) => line.startsWith('|win_'))
-    .map((line, i) => {
+    .map((line) => {
       const spl = line
         .replace(/^\|/, '')
         .replace('<!--', '|')

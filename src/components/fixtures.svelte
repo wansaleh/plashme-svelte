@@ -1,13 +1,12 @@
 <script>
-  import { onMount } from 'svelte';
   import { useSWR } from 'sswr';
   import FixtureTime from './fixture-time.svelte';
 
-  const { data } = useSWR('/fixtures');
+  const { data: theguardian } = useSWR('/theguardian');
 </script>
 
 <div class="-my-4">
-  {#each $data?.fixtures?.slice(0, 3) ?? [] as fixture}
+  {#each $theguardian?.fixtures?.slice(0, 3) ?? [] as fixture}
     <div class="my-4">
       <div class="flex relative justify-end items-center text-3xl">
         <span class="py-0.5 px-1 mr-2 text-sm leading-none rounded-lg border-2">

@@ -1,18 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { tweened } from 'svelte/motion';
-  import {
-    linear,
-    bounceOut,
-    circOut,
-    cubicOut,
-    elasticOut,
-    expoOut,
-    quadOut,
-    quartOut,
-    quintOut,
-    sineOut,
-  } from 'svelte/easing';
+  import { linear, bounceOut, elasticOut } from 'svelte/easing';
 
   let movements = {
     Sweeping: linear,
@@ -43,12 +32,12 @@
 		See more here at this Discord thread:
 		https://discord.com/channels/457912077277855764/457912077277855766/687411610008158289
 		*/
-  function changeSweep() {
-    sweep = tweened($sweep, {
-      duration: 1000,
-      easing: movements[movement],
-    });
-  }
+  // function changeSweep() {
+  //   sweep = tweened($sweep, {
+  //     duration: 1000,
+  //     easing: movements[movement],
+  //   });
+  // }
 
   onMount(() => {
     const interval = setInterval(() => {
