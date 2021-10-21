@@ -14,10 +14,11 @@
   <div class="main-date">
     <!-- <div class="w-60"><AnalogClock /></div> -->
     <TimeDate />
+
     <div class="flex items-end justify-end mt-8">
       <Fixtures />
-      <div class="w-4" />
-      <Table />
+      <!-- <div class="w-4" />
+      <Table /> -->
     </div>
   </div>
 </div>

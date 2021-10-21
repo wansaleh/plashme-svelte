@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="text-[16vw] font-medium tracking-tighter flex items-center text-center"
+  class="text-[12vw] font-medium tracking-tighter flex items-center text-center"
 >
   <span class="w-[1.2em] text-right">{format(date, 'hh')}</span>
   <span class="">{format(date, ':mm:')}</span>
@@ -16,6 +16,8 @@
   <span class="font-thin ml-[0.05em]">{format(date, 'a')}</span>
 </div>
 
-<div class="mr-0 -mt-4 text-[4vw] text-right flex justify-end">
+<div
+  class="mr-0 -mt-4 text-[3vw] font-extralight tracking-normal text-right flex justify-end"
+>
   {format(date, 'iiii, LLLL d, yyy')}
 </div>
