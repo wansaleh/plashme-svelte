@@ -24,8 +24,7 @@
 
 <style>
   .bg {
-    background: url(https://source.unsplash.com/collection/1802604/2500x1400)
-      no-repeat center/cover;
+    @apply bg-blue-900;
   }
 
   .main-date {

@@ -4,11 +4,11 @@
   import { useSWR } from 'sswr';
   import FixtureTime from './fixture-time.svelte';
 
-  const { data: theguardian } = useSWR('/api/chelseafc');
+  const { data } = useSWR('/api/theguardian');
   let fixtures;
   $: {
     fixtures =
-      $theguardian?.fixtures
+      $data?.fixtures
         ?.filter((fix) => isAfter(parseISO(fix.time), new Date()))
         .slice(0, 3) ?? [];
   }
@@ -18,7 +18,9 @@
   {#each fixtures as fixture}
     <div class="my-4">
       <div class="flex relative justify-end items-center text-3xl">
-        <span class="py-0.5 px-1 mr-2 text-sm leading-none rounded-lg border-2">
+        <span
+          class="py-0 px-1.5 mr-2 text-xs leading-normal rounded-md border-2 uppercase font-bold tracking-wide"
+        >
           {fixture.competition}
         </span>
         <span class="font-light tracking-normal">
