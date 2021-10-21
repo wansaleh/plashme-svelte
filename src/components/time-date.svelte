@@ -8,10 +8,12 @@
 </script>
 
 <div
-  class="text-[12vw] font-medium tracking-tighter flex items-center text-center"
+  class="text-[12vw] font-medium tracking-tighter flex items-center text-center leading-none"
 >
   <span class="w-[1.2em] text-right">{format(date, 'hh')}</span>
-  <span class="">{format(date, ':mm:')}</span>
+  <span class="-mt-10">:</span>
+  <span class="">{format(date, 'mm')}</span>
+  <span class="-mt-10">:</span>
   <span class="w-[1.2em] text-left">{format(date, 'ss')}</span>
   <span class="font-thin ml-[0.05em]">{format(date, 'a')}</span>
 </div>
