@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio';
 import { parseISO } from 'date-fns';
 
-interface Fixture {
+export interface Fixture {
   competition: string;
   time: Date;
   homeTeam: string;

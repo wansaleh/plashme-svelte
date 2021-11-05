@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="text-[12vw] font-medium tracking-tighter flex items-center text-center leading-none"
+  class="text-[14vw] font-medium tracking-tight flex items-center text-center leading-none font-clock"
 >
   <span class="w-[1.2em] text-right">{format(date, 'hh')}</span>
   <span class="-mt-10 mx-2.5">:</span>

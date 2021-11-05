@@ -1,11 +1,12 @@
-<script>
+<script type="ts">
   import { isAfter, parseISO } from 'date-fns';
 
   import { useSWR } from 'sswr';
   import FixtureTime from './fixture-time.svelte';
+  import type { Fixture } from '../routes/api/theguardian';
 
   const { data } = useSWR('/api/theguardian');
-  let fixtures;
+  let fixtures: Fixture[];
   $: {
     fixtures =
       $data?.fixtures

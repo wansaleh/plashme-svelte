@@ -9,7 +9,7 @@
   }, 1000);
 </script>
 
-<div class="flex justify-end text-base mt-1">
+<div class="flex justify-end text-base mt-0">
   <div
     class="py-0 px-2.5 text-black bg-white rounded-md"
     style="text-shadow: none;"
