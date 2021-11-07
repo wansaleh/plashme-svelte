@@ -6,7 +6,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: 'Supreme, system-ui, sans-serif',
-        clock: 'Supreme, system-ui, sans-serif',
+        clock: 'JetBRains Mono, system-ui, sans-serif',
       },
     },
   },
