@@ -34,7 +34,7 @@
   .dark-gradient {
     background: radial-gradient(
       circle,
-      rgba(0, 0, 0, 0.65) 30%,
+      rgba(0, 0, 0, 0.3) 30%,
       rgba(0, 0, 0, 0) 200%
     );
   }
