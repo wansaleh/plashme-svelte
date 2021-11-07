@@ -27,7 +27,7 @@
 </div>
 
 <div
-  class="mr-0 mt-0 text-[4vw] font-extralight tracking-normal text-right flex justify-end"
+  class="mr-0 mt-0 text-[3.5vw] font-extralight tracking-normal text-right flex justify-end"
 >
   {format(date, 'iiii, LLLL d, yyy')}
 </div>
