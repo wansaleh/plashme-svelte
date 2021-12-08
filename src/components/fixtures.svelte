@@ -18,17 +18,19 @@
 <div class="-my-4">
   {#each fixtures as fixture}
     <div class="my-4">
-      <div class="flex relative justify-end items-center text-3xl">
+      <div class="flex relative justify-end items-center text-[2vw]">
         <span
-          class="py-0 px-1.5 mr-2 text-xs leading-normal rounded-md border-2 uppercase font-bold tracking-wide"
+          class="py-0 px-[0.5em] mr-2 text-[0.45em] leading-normal rounded-md border-2 uppercase font-bold tracking-wide"
         >
           {fixture.competition}
         </span>
+
         <span class="font-light tracking-normal">
           {fixture.homeTeam} <span class="font-thin">vs</span>
           {fixture.awayTeam}
         </span>
       </div>
+
       <FixtureTime date={fixture.time} />
     </div>
   {/each}

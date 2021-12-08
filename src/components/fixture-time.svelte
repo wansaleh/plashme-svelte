@@ -9,11 +9,8 @@
   }, 1000);
 </script>
 
-<div class="flex justify-end text-base mt-0">
-  <div
-    class="py-0 px-2.5 text-black bg-white rounded-md"
-    style="text-shadow: none;"
-  >
+<div class="flex justify-end text-[1vw] mt-[0.25em] font-light opacity-70">
+  <div>
     {format(parseISO(date), 'iiii, MMMM d, yyy')},
     {format(parseISO(date), 'p')}, in {dist}
   </div>
