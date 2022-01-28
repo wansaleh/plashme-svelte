@@ -1,12 +1,13 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 const config = {
-  mode: 'jit',
-  purge: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
 
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Supreme, system-ui, sans-serif',
-        clock: 'JetBRains Mono, system-ui, sans-serif',
+        sans: ['Inter var', 'Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', 'Inter', ...defaultTheme.fontFamily.sans],
       },
     },
   },

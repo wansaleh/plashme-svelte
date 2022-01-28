@@ -8,15 +8,15 @@
 </script>
 
 <div
-  class="relative w-[55vw] text-[12vw] tracking-tighter flex justify-between items-center text-center leading-none font-clock font-bold -mr-2"
+  class="relative w-[38vw] text-[8vw] tracking-[-0.05em] flex justify-between items-center text-center leading-none font-clock font-bold -mr-2"
 >
   <span class="text-right">{format(date, 'hh')}</span>
 
-  <span class="-mt-10 mx-0 opacity-25">:</span>
+  <span class="mx-0 opacity-25">:</span>
 
   <span class="">{format(date, 'mm')}</span>
 
-  <span class="-mt-10 mx-0 opacity-25">:</span>
+  <span class="mx-0 opacity-25">:</span>
 
   <span class="text-right">{format(date, 'ss')}</span>
 
@@ -29,7 +29,7 @@
 </div>
 
 <div
-  class="mr-0 mt-0 text-[3vw] font-extralight tracking-normal text-right flex justify-end"
+  class="mr-0 mt-0 text-[3vw] font-light tracking-normal text-right flex justify-end"
 >
   {format(date, 'iiii, LLLL d, yyy')}
 </div>
