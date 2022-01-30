@@ -4,7 +4,7 @@
 
   import { useSWR } from 'sswr';
 
-  const { data } = useSWR<{ works: Work[] }>('/api/works');
+  const { data, revalidate } = useSWR<{ works: Work[] }>('/api/works', {});
   let inProgress: Work[] = [];
   let notStarted: Work[] = [];
   $: {
@@ -13,6 +13,10 @@
     notStarted =
       $data?.works.filter((work) => work.status.name === 'Not started') || [];
   }
+
+  setInterval(() => {
+    revalidate();
+  }, 60000);
 </script>
 
 <div class="border-4 rounded-xl p-6 -mb-8">
