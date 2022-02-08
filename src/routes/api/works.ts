@@ -38,10 +38,10 @@ export async function get() {
         name: page.properties.Status.select.name,
         color: page.properties.Status.select.color,
       },
-      client: {
-        name: page.properties.Client.select.name,
-        color: page.properties.Client.select.color,
-      },
+      // client: {
+      //   name: page.properties.Client.select.name,
+      //   color: page.properties.Client.select.color,
+      // },
     };
   });
 

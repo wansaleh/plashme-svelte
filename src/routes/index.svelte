@@ -1,7 +1,7 @@
 <script>
   import TimeDate from '../components/time-date.svelte';
   import Fixtures from '../components/fixtures.svelte';
-  import Works from '../components/works.svelte';
+  // import Works from '../components/works.svelte';
   // import Table from '../components/table.svelte';
   // import AnalogClock from '../components/analog-clock.svelte';
 </script>
@@ -29,9 +29,9 @@
       </div>
     </div>
 
-    <div class="flex justify-end mt-8">
+    <!-- <div class="flex justify-end mt-8">
       <Works />
-    </div>
+    </div> -->
   </div>
 </div>
 
